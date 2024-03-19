@@ -114,11 +114,13 @@ export default function UpdatePost() {
                     className='flex-1'
                     onChange={(e)  => setFormData({...formData, title: e.target.value})
                     }
+                    value={formData.title}
                     //value={formData ? formData.title :''}
                 />
                 
                 <Select
                     onChange={(e) => setFormData({...formData, category: e.target.value})}
+                    value={formData.category}
                     //value={formData ? formData.category :''}
                 >
                     <option value="uncategorized">Select a category</option>
@@ -161,6 +163,7 @@ export default function UpdatePost() {
 
             <ReactQuill 
                 theme='snow' 
+                value={formData.content}
                 // value={formData ? formData.content :''} 
                 placeholder='Write your content here...' 
                 className='h-72 mb-12' 
