@@ -3,7 +3,7 @@ import React, { useEffect, useState } from 'react'
 import { useSelector } from 'react-redux'
 import { HiOutlineExclamationCircle } from 'react-icons/hi';
 import { FaCheck, FaTimes } from 'react-icons/fa';
-import { set } from 'mongoose';
+
 export default function DashUsers() {
     const { currentUser } = useSelector((state) => state.user);
     const [users, setUsers] = useState([]);
